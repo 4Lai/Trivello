@@ -1,0 +1,10 @@
+<section class="where">
+  <a
+    class="where-link where-element {{ el.class }}"
+    *ngFor="let el of whereList"
+    href="{{ el.url }}"
+  >
+    <span class="where-title {{ el.specialClass }}">{{ el.title }}</span>
+    <button class="where-btn" *ngIf="el.specialClass">ZOBACZ WIĘCEJ</button>
+  </a>
+</section>

@@ -1,0 +1,135 @@
+.nav-bar {
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  padding: 16px;
+  height: 100px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  opacity: 0.95;
+  &-logo {
+    margin-left: 16px;
+    align-content: center;
+    width: fit-content;
+    cursor: pointer;
+    &-img {
+      height: 50px;
+    }
+  }
+  &-list {
+    width: 100%;
+    display: flex;
+    column-gap: 20px;
+    list-style: none;
+    align-items: center;
+    &-link {
+      text-decoration: none;
+      //
+      font-size: 24px;
+      //
+      padding: 10px 20px 10px 20px;
+      transition: 0.5s all;
+      width: 11%;
+      &:hover {
+        width: 13%;
+        background-color: #fff;
+        .nav-bar-list-link-li {
+          color: #000;
+        }
+      }
+      &-li {
+        text-align: center;
+        color: #fff;
+        transition: 0.5s all ease-in-out;
+      }
+    }
+  }
+  &-button {
+    margin-right: 16px;
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    &-text {
+      font-size: 32px;
+      color: #fff;
+    }
+  }
+}
+
+.moved2 {
+  background-color: #fff;
+  transition: 0.5s all;
+}
+
+.moved2-trans {
+  background: none;
+  transition: 0.5s all;
+}
+
+.moved3 {
+  color: #000;
+  transition: 1s all ease-in-out;
+}
+
+.moved4 {
+  transition: 0.5s all;
+  &:hover {
+    transition: 0.5s all;
+    background-color: #000;
+    .nav-bar-list-link-li {
+      transition: 0.5s all;
+      color: #fff;
+    }
+  }
+}
+
+.moved-icon-black {
+  color: #000;
+  transition: 1s;
+}
+
+.moved-icon-white {
+  color: #fff;
+  transition: 1s;
+}
+
+.no-visible {
+  z-index: 999;
+  position: absolute;
+  visibility: hidden;
+  transition: 0.5s all;
+  opacity: 0;
+}
+
+.move-in-screen {
+  z-index: 999;
+  position: absolute;
+  visibility: visible;
+  transition: 0.5s all;
+  opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .nav-bar-button {
+    display: block;
+  }
+
+  .nav-bar-list-link {
+    display: none;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .nav-bar-list-link {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1076px) {
+  .nav-bar-list-link {
+    font-size: 20px;
+  }
+}

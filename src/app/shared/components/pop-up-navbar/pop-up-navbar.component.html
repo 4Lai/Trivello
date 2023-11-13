@@ -1,0 +1,19 @@
+<div class="pop-up-navbar">
+  <button class="pop-up-button" (click)="onClickClose()">
+    <span class="material-symbols-outlined pop-up-button-text"> close </span>
+  </button>
+  <ul class="pop-up-navbar-list">
+    <a
+      href="{{ el.url }}"
+      *ngFor="let el of navBarMobile"
+      class="pop-up-navbar-list-link"
+    >
+      <li class="pop-up-navbar-list-link-li">{{ el.title }}</li>
+    </a>
+    <div class="media-icons-container">
+      <a class="media-icons-link" *ngFor="let icon of mediaIcons">
+        <img src="{{icon.url}}" alt="" />
+      </a>
+    </div>
+  </ul>
+</div>

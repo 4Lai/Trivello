@@ -1,0 +1,24 @@
+<section class="testimonials">
+  <h1 class="testimonials-title">
+    Z naszych usług skorzystało już
+    <span class="testimonials-title-number">
+      {{ customerNumber }}
+    </span>
+    osób
+  </h1>
+  <h2 class="testimonials-subtitle">Zaufaj nam jak zrobili to inni!</h2>
+
+  <div class="testimonials-customers">
+    <div class="testimonials-customers-single" *ngFor="let el of customers">
+      <img
+        class="testimonials-customers-single-img"
+        src="{{ el.portrait }}"
+        alt=""
+      />
+      <div class="testimonials-customers-single-background">
+        <h2 class="testimonials-customers-single-name">{{ el.name }}</h2>
+        <p class="testimonials-customers-single-text">{{ el.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+.newsletter {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #000;
+  &-header-container {
+    text-align: center;
+    &-title {
+      font-size: 72px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+  }
+  &-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    &-title {
+      color: #fff;
+      // text-align: center;
+      letter-spacing: 5px;
+      font-weight: 300;
+          text-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    }
+    &-spacing {
+      display: flex;
+      column-gap: 25px;
+      &-input {
+        letter-spacing: 4px;
+        border: 1px solid black;
+        border-radius: 40px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        width: 400px;
+        padding: 16px 32px 16px 32px;
+        font-size: 20px;
+        text-align: center;
+        &::placeholder {
+          text-align: center;
+        }
+      }
+      &-button {
+        overflow: hidden;
+        transition: 0.3s all;
+        border-radius: 40px;
+        border: none;
+        padding: 16px 32px 16px 32px;
+        font-size: 24px;
+        font-weight: 300;
+        background-color: coral;
+        cursor: pointer;
+        color: #fff;
+        border: 3px solid black;
+        &:hover {
+          // color: #000;
+          border: 3px solid #fff;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .newsletter-form-container {
+    row-gap: 25px;
+  }
+  .newsletter-form-container-spacing {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .newsletter-form-container-spacing-input {
+    width: 300px;
+    font-size: 14px;
+  }
+  .newsletter-form-container-spacing-button {
+    width: 175px;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,303 @@
+.where {
+  overflow: hidden;
+  height: 800px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 25% 25% 25% 25%;
+  &-link {
+    text-decoration: none;
+    transition: 0.5s all;
+    &:hover {
+      background-size: 150%;
+      .where-btn {
+        background-color: #fff;
+        color: #000;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  &-element {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 30px;
+    position: relative;
+  }
+  &-title {
+    color: #fff;
+    font-size: 48px;
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+  }
+  &-btn {
+    transition: 0.5s all;
+    border: 2px solid #fff;
+    background: none;
+    padding: 16px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+  }
+}
+
+.single-text {
+  position: static;
+  padding: 0px 16px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.single-container {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: coral;
+  height: auto;
+  width: auto;
+}
+
+.tajlandia {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-image: url(../../../../assets/img/where/tajlandia.jpg);
+  width: auto;
+  height: auto;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.szwajcaria {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  width: auto;
+  height: auto;
+  background-image: url(../../../../assets/img/where/szwajcaria.jpg);
+  background-size: 101%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.japonia {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  width: auto;
+  height: auto;
+  background-image: url(../../../../assets/img/where/japonia.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.indie {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  width: auto;
+  height: auto;
+  background-image: url(../../../../assets/img/where/indie2.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hiszpania {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  width: auto;
+  height: auto;
+  background-image: url(../../../../assets/img/where/hiszpania3.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 0px) and (max-width: 640px) {
+  .where {
+    height: 500px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+  }
+
+  .single-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .szwajcaria {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .indie {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .japonia {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: -1;
+    background-size: 120%;
+    &:hover {
+      background-size: 170%;
+    }
+  }
+
+  .hiszpania {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-size: 110%;
+    &:hover {
+      background-size: 160%;
+    }
+  }
+
+  .tajlandia {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .where-title {
+    font-size: 20px;
+  }
+
+  .where-btn {
+    font-size: 12px;
+    width: 100px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .where {
+    height: 600px;
+    grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+    grid-template-rows: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+  }
+
+  .single-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .szwajcaria {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+
+  .indie {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 7;
+  }
+
+  .japonia {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    background-size: 200%;
+    &:hover {
+      background-size: 250%;
+    }
+  }
+
+  .hiszpania {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    background-size: 120%;
+    &:hover {
+      background-size: 170%;
+    }
+  }
+
+  .tajlandia {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    background-size: 125%;
+    &:hover {
+      background-size: 175%;
+    }
+  }
+
+  .where-title {
+    font-size: 32px;
+  }
+
+  .where-btn {
+    font-size: 18px;
+    width: 150px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .single-container {
+  }
+
+  .tajlandia {
+    background-size: 120%;
+    &:hover {
+      background-size: 170%;
+    }
+  }
+
+  .hiszpania {
+  }
+
+  .indie {
+    background-size: 135%;
+    &:hover {
+      background-size: 185%;
+    }
+  }
+
+  .japonia {
+    background-size: 115%;
+    &:hover {
+      background-size: 165%;
+    }
+  }
+
+  .szwajcaria {
+    background-size: 150%;
+    &:hover {
+      background-size: 200%;
+    }
+  }
+}

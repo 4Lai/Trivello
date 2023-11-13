@@ -1,0 +1,137 @@
+.select-search {
+  &-label {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  &-select {
+    margin-right: 20px;
+    font-size: 20px;
+    padding: 10px 25px;
+    overflow-y: auto;
+    &-option {
+      &:hover {
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .select-search {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 8px;
+  }
+
+  .select-search:last-child {
+    margin-bottom: 20px;
+  }
+
+  .select-search-select {
+    margin: auto auto;
+    width: 75%;
+  }
+
+  .select-search-label {
+    margin: auto auto;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 540px) {
+  .select-search {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 8px;
+  }
+
+  .select-search:last-child {
+    margin-bottom: 20px;
+  }
+
+  .select-search-select {
+    margin: auto auto;
+    width: 100%;
+  }
+
+  .select-search-label {
+    margin: auto auto;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 541px) and (max-width: 700px) {
+  .select-search {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 8px;
+  }
+
+  .select-search:last-child {
+    margin-bottom: 20px;
+  }
+
+  .select-search-select {
+    margin: auto auto;
+    width: 100%;
+  }
+
+  .select-search-label {
+    margin: auto auto;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 960px) {
+  .select-search {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 8px;
+  }
+
+  .select-search:last-child {
+    margin-bottom: 20px;
+  }
+
+  .select-search-select {
+    margin: auto auto;
+    width: 100%;
+  }
+
+  .select-search-label {
+    margin: auto auto;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1400px) {
+  .select-search {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 8px;
+  }
+
+  .select-search:last-child {
+    margin-bottom: 20px;
+  }
+
+  .select-search-select {
+    margin: auto auto;
+    width: 100%;
+  }
+
+  .select-search-label {
+    margin: auto auto;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .select-search-label {
+    font-size: 32px;
+  }
+
+  .select-search-select {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,18 @@
+<div class="select-search">
+  <label class="select-search-label" for="{{ title }}">{{ name }}</label>
+  <select
+    class="select-search-select"
+    name="{{ title }}"
+    id="{{ title }}"
+    formControlName="{{title}}"
+  >
+  <option value="" selected>{{placeholder}}</option>
+    <option
+      class="select-search-select-option"
+      *ngFor="let el of option"
+      value="{{ el.option }}"
+    >
+      {{ el.option }}
+    </option>
+  </select>
+</div>

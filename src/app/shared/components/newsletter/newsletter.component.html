@@ -1,0 +1,24 @@
+<section class="newsletter">
+  <div class="newsletter-header-container">
+    <h1 class="newsletter-header-container-title">Chcesz być na bieżąco?</h1>
+  </div>
+
+  <div class="newsletter-form-container">
+    <h1 class="newsletter-form-container-title">
+      Zasubskrybuj aby być na biężąco z nadchodzącymi ofertami!
+    </h1>
+    <form [formGroup]="formNews" (ngSubmit)="onSubmit()">
+      <div class="newsletter-form-container-spacing">
+        <input
+          placeholder="WPROWADŹ SWÓJ EMAIL"
+          class="newsletter-form-container-spacing-input"
+          formControlName="email"
+          type="email"
+        />
+        <button [disabled]="formNews.invalid" class="newsletter-form-container-spacing-button" type="submit">
+          SUBSKRYBUJ
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

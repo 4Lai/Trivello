@@ -1,0 +1,27 @@
+<nav class="nav-bar" (scroll)="onWindowScroll()">
+  <a (click)="onClickScroll()" class="nav-bar-logo"
+    ><img
+      class="nav-bar-logo-img"
+      src="./../.././../../assets/img/navbar/navbar-logo.png"
+      alt=""
+  /></a>
+  <ul class="nav-bar-list">
+    <a
+      *ngFor="let el of navBarList"
+      class="nav-bar-list-link"
+      href="{{ el.url }}"
+    >
+      <li class="nav-bar-list-link-li">{{ el.title }}</li>
+    </a>
+  </ul>
+  <button (click)="onClickToggleMenu()" class="nav-bar-button">
+    <span class="material-symbols-outlined nav-bar-button-text"> menu </span>
+  </button>
+</nav>
+<app-pop-up-navbar
+  class="no-visible"
+  [ngClass]="{
+    'move-in-screen': isNavOpen === true && wasClicked === true }"
+  [navBarMobile]="navBarList"
+  (onCloseClick)="isNavOpen = false"
+></app-pop-up-navbar>

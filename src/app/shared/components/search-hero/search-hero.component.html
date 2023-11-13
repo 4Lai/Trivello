@@ -1,0 +1,23 @@
+<section class="search-hero">
+  <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="travelForm" class="search-hero-form">
+    <app-select-search
+      [option]="searchHeroCountries"
+      [title]="'country'"
+      [name]="'Wybierz'"
+      [placeholder]="'Kraj'"
+    ></app-select-search>
+    <app-select-search
+      [option]="searchHeroType"
+      [title]="'type'"
+      [name]="'i/lub'"
+      [placeholder]="'Typ podróży'"
+    ></app-select-search>
+    <app-select-search
+      [option]="searchHeroDate"
+      [title]="'date'"
+      [name]="'i/lub'"
+      [placeholder]="'Termin'"
+    ></app-select-search>
+    <button class="search-hero-btn" type="submit">Szukaj</button>
+  </form>
+</section>
