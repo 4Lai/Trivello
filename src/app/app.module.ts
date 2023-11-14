@@ -18,6 +18,7 @@ import { WhereComponent } from './shared/components/where/where.component';
 import { HotDealsSingleComponent } from './shared/components/hot-deals-single/hot-deals-single.component';
 import { NewsletterComponent } from './shared/components/newsletter/newsletter.component';
 import { TestimonialsComponent } from './shared/components/testimonials/testimonials.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -41,9 +42,9 @@ import { TestimonialsComponent } from './shared/components/testimonials/testimon
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

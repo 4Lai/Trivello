@@ -51,8 +51,131 @@
         letter-spacing: 2.5px;
         text-align: justify;
         text-justify: inter-word;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
       }
     }
+  }
+}
+@media (max-width: 500px) {
+  .testimonials-title {
+    text-align: center;
+    width: 100%;
+    line-height: 1;
+    margin-bottom: 30px;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 64px;
+  }
+
+  .testimonials-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .testimonials-customers {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+  }
+  .testimonials-customers-single-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 640px) {
+  .testimonials-title {
+    text-align: center;
+    width: 100%;
+    line-height: 0.95;
+    margin-bottom: 30px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .testimonials-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .testimonials-customers {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .testimonials-title {
+    text-align: center;
+    width: 100%;
+    line-height: 0.95;
+    margin-bottom: 30px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .testimonials-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .testimonials-customers {
+    width: 640px;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1300px) {
+  .testimonials-title {
+    text-align: center;
+    width: 100%;
+    line-height: 0.95;
+    margin-bottom: 30px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .testimonials-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .testimonials-customers {
+    display: grid;
+    grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50% 50%;
+    row-gap: 20px;
+  }
+
+  .testimonials-customers-single:first-child {
+    width: 90%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: flex-end;
+  }
+
+  .testimonials-customers-single:nth-child(2) {
+    width: 90%;
+    grid-column-start: 5;
+    grid-column-end: 8;
+    justify-self: flex-start;
+  }
+
+  .testimonials-customers-single:last-child {
+    width: 90%;
+    grid-column-start: 3;
+    grid-column-end: 6;
   }
 }
