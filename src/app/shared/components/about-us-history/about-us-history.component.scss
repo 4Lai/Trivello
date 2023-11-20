@@ -1,0 +1,95 @@
+.about-us-history {
+  width: 100%;
+  padding-top: 50px;
+  &-title {
+    width: fit-content;
+    font-size: 72px;
+    margin: auto auto;
+    padding-bottom: 50px;
+    font-weight: 300;
+  }
+  &-content {
+    margin: auto auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: flex-start;
+    height: 100%;
+    &-img {
+      width: 80%;
+    }
+    &-text {
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: 3px;
+      text-align: justify;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .about-us-history {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .about-us-history-title {
+    text-align: center;
+  }
+
+  .about-us-history-content {
+    width: 100%;
+    grid-template-columns: 100%;
+    align-items: center;
+    row-gap: 50px;
+  }
+
+  .about-us-history-content-img {
+    width: 100%;
+    align-self: center;
+  }
+
+  .about-us-history-content-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .about-us-history-content {
+    width: calc(100% - 32px);
+    grid-template-columns: 100%;
+    align-items: center;
+    row-gap: 50px;
+  }
+
+  .about-us-history-content-img {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1800px) {
+  .about-us-history-content {
+    display: block;
+  }
+
+  .about-us-history-content-img {
+    width: 50%;
+    height: 50%;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (min-width: 1921px) {
+  .about-us-history-content-text {
+    font-size: 36px;
+  }
+
+  .about-us-history-title {
+    font-size: 108px;
+  }
+}

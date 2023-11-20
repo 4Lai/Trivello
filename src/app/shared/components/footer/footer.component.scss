@@ -1,0 +1,146 @@
+.footer {
+  padding: 50px 16px;
+  height: fit-content;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  &-container {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto auto;
+    column-gap: 20px;
+    &-logo {
+      &-img {
+        height: 100px;
+      }
+    }
+    &-offers {
+      &-link {
+        text-decoration: none;
+        font-size: 36px;
+        color: #fff;
+        transition: 0.5s all;
+        &:hover {
+          color: coral;
+        }
+      }
+    }
+    &-about {
+      &-link {
+        text-decoration: none;
+        font-size: 36px;
+        color: #fff;
+        transition: 0.5s all;
+        &:hover {
+          color: coral;
+        }
+      }
+    }
+    &-contact {
+      &-link {
+        text-decoration: none;
+        font-size: 36px;
+        color: #fff;
+        transition: 0.5s all;
+        &:hover {
+          color: coral;
+        }
+      }
+    }
+    &-social {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      &-title {
+        font-size: 36px;
+        color: #fff;
+      }
+      &-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-single {
+          padding: 8px;
+          transition: 0.5s all;
+          border-radius: 20px;
+          display: flex;
+          align-self: center;
+          &:hover {
+            background-color: coral;
+          }
+        }
+        &-icon {
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .footer-container {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+  .footer-container-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-container-logo-img {
+    height: 75px;
+  }
+  .footer-container-offers-link {
+    font-size: 28px;
+  }
+  .footer-container-about-link {
+    font-size: 28px;
+  }
+  .footer-container-contact-link {
+    font-size: 28px;
+  }
+  .footer-container-contact-text {
+    font-size: 20px;
+  }
+  .footer-container-social-title {
+    font-size: 28px;
+  }
+  .footer-container-social-links-icon {
+    height: 30px;
+  }
+}
+
+@media (min-width: 531px) and (max-width: 854px) {
+  .footer-container {
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  .footer-container-logo {
+    width: 100%;
+    display: flex;
+  }
+  .footer-container-logo-img {
+    height: 75px;
+  }
+  .footer-container-offers-link {
+    font-size: 28px;
+  }
+  .footer-container-about-link {
+    font-size: 28px;
+  }
+  .footer-container-contact-link {
+    font-size: 28px;
+  }
+  .footer-container-social-title {
+    font-size: 28px;
+  }
+  .footer-container-social-links-icon {
+    height: 30px;
+  }
+}

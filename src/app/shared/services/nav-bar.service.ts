@@ -11,8 +11,8 @@ export class NavBarService {
   navBarList: NavBar[] = [
     {title: 'GDZIE', url: '#'},
     {title: 'KIEDY', url: '#'},
-    {title: 'OFERTY', url: '#'},
-    {title: 'EXCLUSIVE', url: '#'},
-    {title: 'O NAS', url: '#'},
+    {title: 'OFERTY', url: '/oferty'},
+    {title: 'EXCLUSIVE', url: '/oferty/exclusive'},
+    {title: 'O NAS', url: '/o-nas'},
   ]
 }

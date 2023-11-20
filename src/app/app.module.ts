@@ -19,6 +19,11 @@ import { HotDealsSingleComponent } from './shared/components/hot-deals-single/ho
 import { NewsletterComponent } from './shared/components/newsletter/newsletter.component';
 import { TestimonialsComponent } from './shared/components/testimonials/testimonials.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { AboutComponent } from './pages/about/about.component';
+import { AboutUsHeroComponent } from './shared/components/about-us-hero/about-us-hero.component';
+import { AboutUsHistoryComponent } from './shared/components/about-us-history/about-us-history.component';
+import { AboutUsContactComponent } from './shared/components/about-us-contact/about-us-contact.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HotDealsSingleComponent,
     NewsletterComponent,
     TestimonialsComponent,
+    FooterComponent,
+    AboutComponent,
+    AboutUsHeroComponent,
+    AboutUsHistoryComponent,
+    AboutUsContactComponent,
   ],
   imports: [
     BrowserModule,

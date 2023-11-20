@@ -123,7 +123,7 @@
   width: auto;
   height: auto;
   background-image: url(../../../../assets/img/where/hiszpania3.jpg);
-  background-size: 100%;
+  background-size: 101%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -172,9 +172,9 @@
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
-    background-size: 110%;
+    background-size: 111%;
     &:hover {
-      background-size: 160%;
+      background-size: 161%;
     }
   }
 
@@ -239,9 +239,9 @@
     grid-column-end: 5;
     grid-row-start: 5;
     grid-row-end: 7;
-    background-size: 120%;
+    background-size: 121%;
     &:hover {
-      background-size: 170%;
+      background-size: 171%;
     }
   }
 
@@ -299,5 +299,21 @@
     &:hover {
       background-size: 200%;
     }
+  }
+}
+
+@media (min-width: 1921px) {
+  .where {
+    height: 950px;
+  }
+
+  .where-title {
+    font-size: 60px;
+  }
+  
+  .where-btn {
+    width: 300px;
+    font-size: 32px;
+    padding: 20px;
   }
 }

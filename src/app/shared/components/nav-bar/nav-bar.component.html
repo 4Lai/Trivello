@@ -9,7 +9,7 @@
     <a
       *ngFor="let el of navBarList"
       class="nav-bar-list-link"
-      href="{{ el.url }}"
+      routerLink="{{ el.url }}"
     >
       <li class="nav-bar-list-link-li">{{ el.title }}</li>
     </a>

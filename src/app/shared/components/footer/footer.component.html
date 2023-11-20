@@ -1,0 +1,34 @@
+<section class="footer">
+  <div class="footer-container">
+    <div class="footer-container-logo">
+      <img
+        class="footer-container-logo-img"
+        src="../../../../assets/img/navbar/navbar-logo.png"
+        alt=""
+      />
+    </div>
+    <div class="footer-container-offers">
+      <a class="footer-container-offers-link" routerLink="">Oferty</a>
+    </div>
+    <div class="footer-container-about">
+      <a class="footer-container-about-link" routerLink="/o-nas">O nas</a>
+    </div>
+    <div class="footer-container-contact">
+      <a class="footer-container-contact-link" routerLink="" (click)="click()">Kontakt</a>
+    </div>
+    <div class="footer-container-social">
+      <p class="footer-container-social-title">Media społecznościowe</p>
+      <div class="footer-container-social-links">
+        <a
+          class="footer-container-social-links-single"
+          *ngFor="let el of mediaIcons"
+          href="#"
+          ><img
+            class="footer-container-social-links-icon"
+            src="{{ el.url }}"
+            alt=""
+        /></a>
+      </div>
+    </div>
+  </div>
+</section>

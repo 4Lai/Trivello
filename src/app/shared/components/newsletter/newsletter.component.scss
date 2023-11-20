@@ -18,12 +18,11 @@
     row-gap: 50px;
     &-title {
       color: #fff;
-      // text-align: center;
       letter-spacing: 5px;
       font-weight: 300;
-          text-align: center;
-    margin-left: 16px;
-    margin-right: 16px;
+      text-align: center;
+      margin-left: 16px;
+      margin-right: 16px;
     }
     &-spacing {
       display: flex;
@@ -55,7 +54,6 @@
         color: #fff;
         border: 3px solid black;
         &:hover {
-          // color: #000;
           border: 3px solid #fff;
         }
       }
@@ -79,5 +77,26 @@
   .newsletter-form-container-spacing-button {
     width: 175px;
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1921px) {
+  .newsletter {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .newsletter-header-container-title {
+    font-size: 108px;
+  }
+
+  .newsletter-form-container-title {
+    font-size: 48px;
+  }
+  .newsletter-form-container-spacing-input {
+    width: 500px;
+    font-size: 28px;
+  }
+  .newsletter-form-container-spacing-button {
+    font-size: 32px;
   }
 }
