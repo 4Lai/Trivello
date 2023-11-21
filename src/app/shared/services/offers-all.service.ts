@@ -17,6 +17,7 @@ export class OffersAllService {
       town: 'Wenecja',
       img: '../../../assets/img/hero/hot-deals/wenecja1.jpg',
       score: 7.5,
+      id: 1,
     },
     {
       typeOfJourney: 'Zwykła',
@@ -27,6 +28,7 @@ export class OffersAllService {
       town: 'Meksyk',
       img: '../../../assets/img/hero/hot-deals/meksyk1.jpg',
       score: 8.3,
+      id: 2,
     },
     {
       typeOfJourney: 'Zwykła',
@@ -37,6 +39,7 @@ export class OffersAllService {
       town: 'Algier',
       img: '../../../assets/img/offers/thumb/Algier-town.jpg',
       score: 9.1,
+      id: 3,
     },
   ];
 }

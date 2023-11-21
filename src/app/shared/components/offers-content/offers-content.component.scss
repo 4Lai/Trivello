@@ -1,7 +1,7 @@
 .offers-content {
-  width: 75%;
+  width: 80%;
   display: grid;
-  grid-template-columns: 15% 60%;
+  grid-template-columns: 20% 60%;
   justify-content: center;
   margin: auto auto;
   padding-top: 50px;
@@ -10,9 +10,42 @@
   &-form-container {
     &-title {
       font-weight: 300;
-      font-size: 32px;
+      font-size: 36px;
     }
     &-form {
+      &-type {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 10px;
+        &-radio {
+          display: flex;
+          column-gap: 5px;
+          align-items: center;
+        }
+      }
+      &-price {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 10px;
+        &-input {
+          padding: 4px 30px 4px 8px;
+          width: 100%;
+          font-size: 18px;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+          &::placeholder {
+          }
+          &-cur {
+            position: absolute;
+            right: 10%;
+            top: 50%;
+            z-index: 999;
+            transform: translate(-10%, -50%);
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+              sans-serif;
+          }
+        }
+      }
     }
   }
   &-list {
@@ -21,13 +54,13 @@
     row-gap: 15px;
     list-style: none;
     &-p {
-      font-size: 20px;
+      font-size: 24px;
       margin-bottom: 20px;
     }
     &-li {
       text-decoration: none;
       display: grid;
-      grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-template-columns: 33.33% 39.33% 27.33%;
       height: 300px;
       border-radius: 20px;
       border: 1px solid black;
@@ -44,48 +77,52 @@
       &-titles {
         padding: 30px;
         &-country {
-          font-size: 24px;
+          font-size: 28px;
         }
         &-town {
-          font-size: 36px;
+          font-size: 40px;
           margin-bottom: 20px;
         }
         &-stay {
           display: flex;
           text-align: center;
           align-items: center;
-          font-size: 18px;
+          font-size: 22px;
           column-gap: 5px;
           margin-bottom: 10px;
         }
       }
       &-score-container {
-        padding: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-left: 1px solid coral;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
         &-rating {
           border-radius: 10px;
-          padding: 10px 20px;
+          padding: 10px 25px;
           background-color: #000;
           display: flex;
           align-items: center;
-          column-gap: 10px;
+          column-gap: 15px;
         }
         &-p {
           width: fit-content;
           padding: 8px 12px;
           background-color: coral;
           color: #fff;
-          font-size: 24px;
+          font-size: 28px;
           border-radius: 5px;
         }
       }
       &-price {
-        font-size: 18px;
+        font-size: 22px;
         &-s {
-          font-size: 32px;
+          font-size: 36px;
         }
       }
     }
@@ -94,4 +131,41 @@
 
 .icon-thumb {
   color: #fff;
+}
+
+hr {
+  margin-bottom: 30px;
+}
+
+.margin-b {
+  margin-bottom: 20px;
+}
+
+.form-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.price-container {
+  position: relative;
+}
+
+.price-inputs-spacing {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.icon {
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }

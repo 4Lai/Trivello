@@ -2,8 +2,65 @@
   <div class="offers-content-form-container">
     <h2 class="offers-content-form-container-title">Filtrowanie</h2>
     <hr />
-    <form class="offers-content-form-container-form">
-      <input type="text" />
+    <form
+      [formGroup]="offersForm"
+      (submit)="onSubmit()"
+      class="offers-content-form-container-form"
+    >
+      <div class="offers-content-form-container-form-type">
+        <p class="form-title">Typ podróży</p>
+        <div class="offers-content-form-container-form-type-radio">
+          <input
+            type="radio"
+            id="Zwykła"
+            value="Zwykła"
+            formControlName="typeOfJourney"
+          />
+          <label for="">Zwykła</label>
+        </div>
+        <div class="offers-content-form-container-form-type-radio margin-b">
+          <input
+            type="radio"
+            id="Exclusive"
+            value="Exclusive"
+            formControlName="typeOfJourney"
+          />
+          <label for="">Exclusive</label>
+        </div>
+        <hr />
+      </div>
+
+      <div class="offers-content-form-container-form-price">
+        <p class="form-title">Cena</p>
+        <div class="price-inputs-spacing">
+          <div class="price-container">
+            <input
+              class="offers-content-form-container-form-price-input"
+              type="number"
+              placeholder="od"
+              formControlName="fromPrice"
+              min="0"
+            />
+            <span class="offers-content-form-container-form-price-input-cur"
+              >zł</span
+            >
+          </div>
+          <span class="material-symbols-outlined icon"> minimize </span>
+          <div class="price-container">
+            <input
+              class="offers-content-form-container-form-price-input"
+              placeholder="do"
+              type="number"
+              formControlName="toPrice"
+            />
+            <span class="offers-content-form-container-form-price-input-cur"
+              >zł</span
+            >
+          </div>
+        </div>
+        <hr />
+      </div>
+      <button type="submit">Filtruj</button>
     </form>
   </div>
 
@@ -12,7 +69,7 @@
       Ilość dostępnych ofert {{ allOffers.length }}
     </p>
     <li class="" *ngFor="let offer of allOffers">
-      <a class="offers-content-list-li" routerLink="">
+      <a class="offers-content-list-li" routerLink="{{ offer.id }}">
         <div class="offers-content-list-li-img-container">
           <img
             class="offers-content-list-li-img-container-img"

@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'o-nas', component: AboutComponent },
   { path: 'oferty', component: OffersComponent },
-  { path: 'oferty:id', component: OfferDetailedComponent },
+  { path: 'oferty/:id', component: OfferDetailedComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
