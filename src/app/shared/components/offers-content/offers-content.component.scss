@@ -1,0 +1,97 @@
+.offers-content {
+  width: 75%;
+  display: grid;
+  grid-template-columns: 15% 60%;
+  justify-content: center;
+  margin: auto auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  column-gap: 50px;
+  &-form-container {
+    &-title {
+      font-weight: 300;
+      font-size: 32px;
+    }
+    &-form {
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 15px;
+    list-style: none;
+    &-p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    &-li {
+      text-decoration: none;
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      height: 300px;
+      border-radius: 20px;
+      border: 1px solid black;
+      overflow: hidden;
+      &-img-container {
+        position: relative;
+        &-img {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      &-titles {
+        padding: 30px;
+        &-country {
+          font-size: 24px;
+        }
+        &-town {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+        &-stay {
+          display: flex;
+          text-align: center;
+          align-items: center;
+          font-size: 18px;
+          column-gap: 5px;
+          margin-bottom: 10px;
+        }
+      }
+      &-score-container {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        &-rating {
+          border-radius: 10px;
+          padding: 10px 20px;
+          background-color: #000;
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+        }
+        &-p {
+          width: fit-content;
+          padding: 8px 12px;
+          background-color: coral;
+          color: #fff;
+          font-size: 24px;
+          border-radius: 5px;
+        }
+      }
+      &-price {
+        font-size: 18px;
+        &-s {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+.icon-thumb {
+  color: #fff;
+}

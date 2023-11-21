@@ -24,6 +24,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { AboutUsHeroComponent } from './shared/components/about-us-hero/about-us-hero.component';
 import { AboutUsHistoryComponent } from './shared/components/about-us-history/about-us-history.component';
 import { AboutUsContactComponent } from './shared/components/about-us-contact/about-us-contact.component';
+import { OffersComponent } from './pages/offers/offers.component';
+import { OfferDetailedComponent } from './pages/offer-detailed/offer-detailed.component';
+import { OffersHeroComponent } from './shared/components/offers-hero/offers-hero.component';
+import { OffersContentComponent } from './shared/components/offers-content/offers-content.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,10 @@ import { AboutUsContactComponent } from './shared/components/about-us-contact/ab
     AboutUsHeroComponent,
     AboutUsHistoryComponent,
     AboutUsContactComponent,
+    OffersComponent,
+    OfferDetailedComponent,
+    OffersHeroComponent,
+    OffersContentComponent,
   ],
   imports: [
     BrowserModule,

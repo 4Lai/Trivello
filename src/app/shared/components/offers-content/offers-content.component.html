@@ -1,0 +1,55 @@
+<section class="offers-content">
+  <div class="offers-content-form-container">
+    <h2 class="offers-content-form-container-title">Filtrowanie</h2>
+    <hr />
+    <form class="offers-content-form-container-form">
+      <input type="text" />
+    </form>
+  </div>
+
+  <ul class="offers-content-list">
+    <p class="offers-content-list-p">
+      Ilość dostępnych ofert {{ allOffers.length }}
+    </p>
+    <li class="" *ngFor="let offer of allOffers">
+      <a class="offers-content-list-li" routerLink="">
+        <div class="offers-content-list-li-img-container">
+          <img
+            class="offers-content-list-li-img-container-img"
+            src="{{ offer.img }}"
+            alt=""
+          />
+        </div>
+        <div class="offers-content-list-li-titles">
+          <p class="offers-content-list-li-titles-country">
+            {{ offer.country }}
+          </p>
+          <h4 class="offers-content-list-li-titles-town">{{ offer.town }}</h4>
+          <div class="offers-content-list-li-titles-stay">
+            <span class="material-symbols-outlined"> calendar_month </span>
+            <span>{{ offer.lengthOfStay }} dni</span>
+          </div>
+          <div class="offers-content-list-li-titles-stay">
+            <span class="material-symbols-outlined"> business_center </span>
+            <span>{{ offer.typeOfJourney }}</span>
+          </div>
+        </div>
+        <div class="offers-content-list-li-score-container">
+          <div class="offers-content-list-li-score-container-rating">
+            <span class="material-symbols-outlined icon-thumb"> thumb_up </span>
+            <p class="offers-content-list-li-score-container-p">
+              {{ offer.score }}
+            </p>
+          </div>
+          <p class="offers-content-list-li-price">
+            od
+            <span class="offers-content-list-li-price-s">
+              {{ offer.price }} zł
+            </span>
+            /os.
+          </p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>

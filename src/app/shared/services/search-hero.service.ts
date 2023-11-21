@@ -18,9 +18,7 @@ export class SearchHeroService {
 
   searchHeroType: SearchHero[] = [
     { option: 'Exclusive' },
-    { option: 'Dzika przyroda' },
-    { option: 'Safari' },
-    { option: 'Nurkowanie' },
+    { option: 'Zwykła' },
   ];
 
   searchHeroDate: SearchHero[] = [
