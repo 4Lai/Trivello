@@ -40,6 +40,7 @@
               placeholder="od"
               formControlName="fromPrice"
               min="0"
+              oninput="validity.valid||(value=value.replace(/\D+/g, ''))"
             />
             <span class="offers-content-form-container-form-price-input-cur"
               >zł</span
@@ -52,6 +53,8 @@
               placeholder="do"
               type="number"
               formControlName="toPrice"
+              min="0"
+              oninput="validity.valid||(value=value.replace(/\D+/g, ''))"
             />
             <span class="offers-content-form-container-form-price-input-cur"
               >zł</span
@@ -60,7 +63,76 @@
         </div>
         <hr />
       </div>
-      <button type="submit">Filtruj</button>
+
+      <div class="offers-content-form-container-form-stay">
+        <p class="form-title">Długość pobytu</p>
+        <div class="stay-container">
+          <input
+            class="offers-content-form-container-form-stay-input"
+            type="number"
+            min="1"
+            formControlName="lengthOfStay"
+            oninput="validity.valid||(value=value.replace(/\D+/g, ''))"
+          />
+          <span class="offers-content-form-container-form-stay-input-days"
+            >(maks dni)</span
+          >
+        </div>
+        <hr />
+      </div>
+
+      <div class="offers-content-form-container-form-countries">
+        <p class="form-title">Dostępne kraje</p>
+        <select
+          class="offers-content-form-container-form-countries-select"
+          name=""
+          id=""
+          formControlName="country"
+        >
+          <option
+            class="offers-content-form-container-form-countries-select-option"
+            value=""
+          >
+            Wybierz kraj
+          </option>
+          <option
+            class="offers-content-form-container-form-countries-select-option"
+            value="{{ country.country }}"
+            *ngFor="let country of allCountries"
+          >
+            {{ country.country }}
+          </option>
+        </select>
+        <hr />
+      </div>
+
+      <div class="offers-content-form-container-form-deadline">
+        <p class="form-title">Termin</p>
+        <select
+          class="offers-content-form-container-form-deadline-select"
+          formControlName="deadline"
+          name=""
+          id=""
+        >
+          <option
+            class="offers-content-form-container-form-deadline-select-option"
+            value=""
+          >
+            Wybierz termin
+          </option>
+          <option
+            class="offers-content-form-container-form-deadline-select-option"
+            *ngFor="let month of deadline"
+            value="{{ month.month }}"
+          >
+            {{ month.month }}
+          </option>
+        </select>
+      </div>
+
+      <div class="button-container">
+        <button class="button-container-submit" type="submit">Filtruj</button>
+      </div>
     </form>
   </div>
 
@@ -101,9 +173,9 @@
           <p class="offers-content-list-li-price">
             od
             <span class="offers-content-list-li-price-s">
-              {{ offer.price }} zł
+              {{ offer.price }}
             </span>
-            /os.
+            zł/os.
           </p>
         </div>
       </a>
