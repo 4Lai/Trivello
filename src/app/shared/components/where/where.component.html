@@ -1,8 +1,8 @@
-<section class="where">
+<section class="where" id="gdzie">
   <a
     class="where-link where-element {{ el.class }}"
     *ngFor="let el of whereList"
-    href="{{ el.url }}"
+    routerLink="/oferty/{{ el.id }}"
   >
     <span class="where-title {{ el.specialClass }}">{{ el.title }}</span>
     <button class="where-btn" *ngIf="el.specialClass">ZOBACZ WIĘCEJ</button>

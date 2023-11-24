@@ -103,7 +103,7 @@ export class OffersAllService {
   offersDataCountries: OffersCountries[] = [
     { country: 'Włochy' },
     { country: 'Meksyk' },
-    { country: 'Algiera' },
+    { country: 'Algieria' },
     { country: 'Indie' },
     { country: 'Japonia' },
     { country: 'Tajlandia' },

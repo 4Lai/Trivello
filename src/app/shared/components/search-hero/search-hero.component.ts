@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { SearchHeroService } from '../../services/search-hero.service';
 import { SearchHero } from '../../interfaces/search-hero';
 import { FormControl, FormGroup } from '@angular/forms';
+import { OffersAllService } from '../../services/offers-all.service';
+import { OffersDeadline } from '../../interfaces/offers-deadline';
+import { OffersCountries } from '../../interfaces/offers-countries';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-hero',
@@ -13,7 +17,7 @@ export class SearchHeroComponent implements OnInit {
   searchHeroType: SearchHero[] = [];
   searchHeroDate: SearchHero[] = [];
 
-  constructor(private searchHeroService: SearchHeroService) {}
+  constructor(private searchHeroService: SearchHeroService, private router:Router) {}
 
   ngOnInit(): void {
     this.searchHeroCountries = this.searchHeroService.searchHeroCountries;
@@ -24,16 +28,17 @@ export class SearchHeroComponent implements OnInit {
   travelForm = new FormGroup<travelFormInterface>({
     country: new FormControl(''),
     type: new FormControl(''),
-    date: new FormControl(''),
+    month: new FormControl(''),
   });
 
   onSubmit() {
     console.log(this.travelForm.value);
+    this.router.navigate(['/oferty'], {queryParams: {type: this.travelForm.value.type, country: this.travelForm.value.country, date: this.travelForm.value.month }})
   }
 }
 
 export interface travelFormInterface {
   country: FormControl<string | null>;
   type: FormControl<string | null>;
-  date: FormControl<string | null>;
+  month: FormControl<string | null>;
 }

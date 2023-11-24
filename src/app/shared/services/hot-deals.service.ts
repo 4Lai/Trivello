@@ -15,6 +15,7 @@ export class HotDealsService {
       description:
         '  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias sint, quam et odio incidunt dicta modi quibusdam nisi soluta voluptate odit corrupti voluptatum atque quia?',
       url: '/wenecja',
+      id: 1,
     },
     {
       title: 'MEKSYK',
@@ -23,6 +24,7 @@ export class HotDealsService {
       description:
         '  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias sint, quam et odio incidunt dicta modi quibusdam nisi soluta voluptate odit corrupti voluptatum atque quia?',
       url: '/meksyk',
+      id: 2,
     },
     {
       title: 'AFRYKA',
@@ -31,6 +33,7 @@ export class HotDealsService {
       description:
         '  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias sint, quam et odio incidunt dicta modi quibusdam nisi soluta voluptate odit corrupti voluptatum atque quia?',
       url: '/afryka',
+      id: 3,
     },
   ];
 }

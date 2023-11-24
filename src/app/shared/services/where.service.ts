@@ -11,33 +11,32 @@ export class WhereService {
     {
       title: 'Tajlandia',
       class: 'tajlandia',
-      url: 'tajlandia'
+      id: 6
     },
     {
       title: 'Szwajcaria',
       class: 'szwajcaria',
-      url: 'szwajcaria'
+      id: 8
     },
     {
       title: 'Najciekawsze destynacje',
       class: 'single-container',
       specialClass: 'single-text',
-      url: 'oferty'
     },
     {
       title: 'Japonia',
       class: 'japonia',
-      url: 'japonia'
+      id: 5
     },
     {
       title: 'Indie',
       class: 'indie',
-      url: 'indie'
+      id: 4
     },
     {
       title: 'Hiszpania',
       class: 'hiszpania',
-      url: 'hiszpania'
+      id: 7
     },
   ];
 }

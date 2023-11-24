@@ -1,6 +1,6 @@
 export interface Where {
   title: string;
-  url: string;
+  id?: number;
   class?: string;
   specialClass?: string;
 }

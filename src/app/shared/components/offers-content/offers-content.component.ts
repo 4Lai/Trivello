@@ -4,6 +4,7 @@ import { OffersAllService } from '../../services/offers-all.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { OffersCountries } from '../../interfaces/offers-countries';
 import { OffersDeadline } from '../../interfaces/offers-deadline';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-offers-content',
@@ -15,16 +16,48 @@ export class OffersContentComponent implements OnInit {
   allCountries: OffersCountries[] = [];
   deadline: OffersDeadline[] = [];
 
-  constructor(private offersAllService: OffersAllService) {}
+  constructor(
+    private offersAllService: OffersAllService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.allOffers = this.offersAllService.offersDataAll;
     this.allCountries = this.offersAllService.offersDataCountries;
     this.deadline = this.offersAllService.offersDeadline;
+
+    this.activatedRoute.queryParams.subscribe((param) => {
+      if (param) {
+        this.filterFromMain(
+          this.activatedRoute.snapshot.queryParamMap.get('type'),
+          this.activatedRoute.snapshot.queryParamMap.get('country'),
+          this.activatedRoute.snapshot.queryParamMap.get('date')
+        );
+      }
+    });
+
+    // this.filterFromMain(
+    //   this.activatedRoute.snapshot.queryParamMap.get('type'),
+    //   this.activatedRoute.snapshot.queryParamMap.get('country'),
+    //   this.activatedRoute.snapshot.queryParamMap.get('date')
+    // );
+  }
+
+  filterFromMain(
+    type: string | null,
+    country: string | null,
+    date: string | null
+  ) {
+    this.offersForm.value.typeOfJourney = type;
+    this.offersForm.value.country = country;
+    this.offersForm.value.deadline = date;
+
+    this.onSubmit();
   }
 
   offersForm = new FormGroup<OffersFormGroup>({
-    typeOfJourney: new FormControl('Zwykła'),
+    typeOfJourney: new FormControl(''),
     fromPrice: new FormControl(''),
     toPrice: new FormControl(''),
     lengthOfStay: new FormControl(''),
@@ -33,13 +66,6 @@ export class OffersContentComponent implements OnInit {
   });
 
   onSubmit() {
-    // console.log(this.offersForm.value.typeOfJourney);
-    // console.log(this.offersForm.value.fromPrice);
-    // console.log(this.offersForm.value.toPrice);
-    // console.log(this.offersForm.value.lengthOfStay);
-    // console.log(this.offersForm.value.country);
-    // console.log(this.offersForm.value.deadline);
-    // console.log(this.offersForm.value);
     this.allOffers = this.offersAllService.offersDataAll;
 
     let filteredOffers = this.allOffers.filter((el) => {
@@ -90,10 +116,17 @@ export class OffersContentComponent implements OnInit {
       let isNotMatched = match.some((val) => {
         return val === false;
       });
-      
+
       return isNotMatched ? null : el;
     });
 
+    this.router.navigate(['/oferty'], {
+      queryParams: {
+        type: this.offersForm.value.typeOfJourney,
+        country: this.offersForm.value.country,
+        date: this.offersForm.value.deadline,
+      },
+    });
     this.allOffers = filteredOffers;
   }
 }

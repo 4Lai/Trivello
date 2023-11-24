@@ -1,5 +1,5 @@
 <section class="search-hero">
-  <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="travelForm" class="search-hero-form">
+  <form (ngSubmit)="onSubmit()" [formGroup]="travelForm" class="search-hero-form">
     <app-select-search
       [option]="searchHeroCountries"
       [title]="'country'"
@@ -14,7 +14,7 @@
     ></app-select-search>
     <app-select-search
       [option]="searchHeroDate"
-      [title]="'date'"
+      [title]="'month'"
       [name]="'i/lub'"
       [placeholder]="'Termin'"
     ></app-select-search>

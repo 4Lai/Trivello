@@ -4,9 +4,10 @@
   </button>
   <ul class="pop-up-navbar-list">
     <a
-      href="{{ el.url }}"
+      routerLink="{{ el.url }}"
       *ngFor="let el of navBarMobile"
       class="pop-up-navbar-list-link"
+
     >
       <li class="pop-up-navbar-list-link-li">{{ el.title }}</li>
     </a>

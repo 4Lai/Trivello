@@ -5,7 +5,7 @@
 </h1>
 <div class="hot-deals-single">
   <div class="hot-deals-single-element" *ngFor="let el of deal">
-    <a routerLink="{{ el.url }}">
+    <a routerLink="/oferty/{{ el.id }}">
       <div class="hot-deals-single-img-container">
         <img class="hot-deals-single-element-img" src="{{ el.img }}" alt="" />
         <p class="hot-deals-single-element-price">{{ el.price }}</p>

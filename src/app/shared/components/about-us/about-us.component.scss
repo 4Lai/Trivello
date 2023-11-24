@@ -1,7 +1,5 @@
 .about-us {
-  // height: 60dvh;
   padding-top: 75px;
-  padding-bottom: 75px;
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
@@ -15,7 +13,7 @@
       font-size: 72px;
       text-align: center;
       font-weight: 300;
-      margin-bottom: 20px;
+      margin-bottom: 20px
     }
     &-text {
       font-size: 20px;

@@ -8,8 +8,10 @@
   <ul class="nav-bar-list">
     <a
       *ngFor="let el of navBarList"
-      class="nav-bar-list-link"
+      class="nav-bar-list-link {{ el.specialClass }}"
       routerLink="{{ el.url }}"
+      (click)="el.frag ? onClickWhereScroll() : null"
+      [queryParams]="el.query === 'Exclusive' ? { type: el.query } : {}"
     >
       <li class="nav-bar-list-link-li">{{ el.title }}</li>
     </a>
@@ -21,7 +23,8 @@
 <app-pop-up-navbar
   class="no-visible"
   [ngClass]="{
-    'move-in-screen': isNavOpen === true && wasClicked === true }"
+    'move-in-screen': isNavOpen === true && wasClicked === true
+  }"
   [navBarMobile]="navBarList"
   (onCloseClick)="isNavOpen = false"
 ></app-pop-up-navbar>

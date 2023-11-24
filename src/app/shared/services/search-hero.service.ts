@@ -8,12 +8,14 @@ export class SearchHeroService {
   constructor() {}
 
   searchHeroCountries: SearchHero[] = [
-    { option: 'Australia' },
-    { option: 'Argentyna' },
-    { option: 'Chorwacja' },
-    { option: 'Egipt' },
-    { option: 'Malediwy' },
-    { option: 'Turcja' },
+    { option: 'Włochy' },
+    { option: 'Meksyk' },
+    { option: 'Algieria' },
+    { option: 'Indie' },
+    { option: 'Japonia' },
+    { option: 'Tajlandia' },
+    { option: 'Hiszpania' },
+    { option: 'Szwajcaria' },
   ];
 
   searchHeroType: SearchHero[] = [

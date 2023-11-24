@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { NavBarService } from '../../services/nav-bar.service';
 import { NavBar } from '../../interfaces/nav-bar';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,12 +14,13 @@ export class NavBarComponent implements OnInit {
   isNavOpen: boolean = false;
   wasClicked: boolean = false;
 
-  constructor(private navBarService: NavBarService, private router: Router) {}
+  constructor(private navBarService: NavBarService, private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.navBarList = this.navBarService.navBarList;
     this.currRoute = this.router.url;
   }
+
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -69,6 +70,10 @@ export class NavBarComponent implements OnInit {
     } else {
       this.router.navigate(['/']);
     }
+  }
+
+  onClickWhereScroll() {
+    this.router.navigate(['/'], {fragment: 'gdzie'})
   }
 
   onClickToggleMenu() {

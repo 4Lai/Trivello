@@ -19,6 +19,6 @@ export class FooterComponent implements OnInit {
 
 
   click() {
-    this.router.navigate(['/o-nas'], {fragment: 'c'})
+    this.router.navigate(['/o-nas'], {fragment: 'kontakt'})
   }
 }
