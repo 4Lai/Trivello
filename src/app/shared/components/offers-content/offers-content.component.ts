@@ -36,12 +36,6 @@ export class OffersContentComponent implements OnInit {
         );
       }
     });
-
-    // this.filterFromMain(
-    //   this.activatedRoute.snapshot.queryParamMap.get('type'),
-    //   this.activatedRoute.snapshot.queryParamMap.get('country'),
-    //   this.activatedRoute.snapshot.queryParamMap.get('date')
-    // );
   }
 
   filterFromMain(

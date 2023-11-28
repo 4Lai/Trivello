@@ -1,0 +1,55 @@
+.offer-detail-score {
+  display: flex;
+  column-gap: 25px;
+  align-items: center;
+  margin-bottom: 25px;
+  &-op {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  &-cont {
+    border-radius: 10px;
+    width: fit-content;
+    height: 61.38px;
+    display: flex;
+    align-items: center;
+    padding: 0px 25px;
+    background-color: #000;
+    color: #fff;
+    column-gap: 25px;
+    &-i {
+      color: #fff;
+      font-size: 28px;
+    }
+    &-p {
+      border-radius: 10px;
+      color: #fff;
+      font-size: 24px;
+      padding: 6px 10px;
+      background-color: coral;
+    }
+  }
+}
+.text-color {
+  color: coral;
+}
+
+@media (max-width: 540px) {
+}
+
+@media (min-width: 1921px) {
+  .offer-detail-score-cont-p {
+    font-size: 36px;
+  }
+  .offer-detail-score-op {
+    font-size: 36px;
+  }
+  .offer-detail-score-cont-i {
+    font-size: 40px;
+  }
+  .offer-detail-score-cont {
+    height: 90px;
+    padding: 0px 35px;
+  }
+}

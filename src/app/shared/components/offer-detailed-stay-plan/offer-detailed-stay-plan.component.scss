@@ -1,0 +1,18 @@
+.offer-detailed-stay-plan {
+  margin: auto auto;
+  width: 80%;
+  &-p {
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    font-weight: 300;
+    width: fit-content;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 1921px) {
+  .offer-detailed-stay-plan-p {
+    font-size: 40px;
+  }
+}

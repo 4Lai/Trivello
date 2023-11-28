@@ -28,6 +28,13 @@ import { OffersComponent } from './pages/offers/offers.component';
 import { OfferDetailedComponent } from './pages/offer-detailed/offer-detailed.component';
 import { OffersHeroComponent } from './shared/components/offers-hero/offers-hero.component';
 import { OffersContentComponent } from './shared/components/offers-content/offers-content.component';
+import { OfferDetailedHeroComponent } from './shared/components/offer-detailed-hero/offer-detailed-hero.component';
+import { OfferDetailedContentComponent } from './shared/components/offer-detailed-content/offer-detailed-content.component';
+import { OfferDetailTitleComponent } from './shared/components/offer-detail-title/offer-detail-title.component';
+import { OfferDetailScoreComponent } from './shared/components/offer-detail-score/offer-detail-score.component';
+import { OfferDetailedObjComponent } from './shared/components/offer-detailed-obj/offer-detailed-obj.component';
+import { OffersDetailedRecComponent } from './shared/components/offers-detailed-rec/offers-detailed-rec.component';
+import { OfferDetailedStayPlanComponent } from './shared/components/offer-detailed-stay-plan/offer-detailed-stay-plan.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +61,13 @@ import { OffersContentComponent } from './shared/components/offers-content/offer
     OfferDetailedComponent,
     OffersHeroComponent,
     OffersContentComponent,
+    OfferDetailedHeroComponent,
+    OfferDetailedContentComponent,
+    OfferDetailTitleComponent,
+    OfferDetailScoreComponent,
+    OfferDetailedObjComponent,
+    OffersDetailedRecComponent,
+    OfferDetailedStayPlanComponent,
   ],
   imports: [
     BrowserModule,

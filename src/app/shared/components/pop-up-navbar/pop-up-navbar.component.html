@@ -7,13 +7,15 @@
       routerLink="{{ el.url }}"
       *ngFor="let el of navBarMobile"
       class="pop-up-navbar-list-link"
-
+      (click)="el.frag ? onClickWhereScroll() : null"
+      (click)="onClickClose()"
+      [queryParams]="el.query === 'Exclusive' ? { type: el.query } : {}"
     >
       <li class="pop-up-navbar-list-link-li">{{ el.title }}</li>
     </a>
     <div class="media-icons-container">
       <a class="media-icons-link" *ngFor="let icon of mediaIcons">
-        <img src="{{icon.url}}" alt="" />
+        <img src="{{ icon.url }}" alt="" />
       </a>
     </div>
   </ul>

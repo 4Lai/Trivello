@@ -11,6 +11,7 @@
         <p class="form-title">Typ podróży</p>
         <div class="offers-content-form-container-form-type-radio">
           <input
+          class="radio-btn"
             type="radio"
             id="Zwykła"
             value="Zwykła"
@@ -20,6 +21,7 @@
         </div>
         <div class="offers-content-form-container-form-type-radio margin-b">
           <input
+          class="radio-btn"
             type="radio"
             id="Exclusive"
             value="Exclusive"
@@ -136,10 +138,13 @@
     </form>
   </div>
 
+
+
   <ul class="offers-content-list">
     <p class="offers-content-list-p">
       Ilość dostępnych ofert {{ allOffers.length }}
     </p>
+    <p class="no-offers-message" *ngIf="allOffers.length === 0">Brak ofert o określonych kryteriach</p>
     <li class="" *ngFor="let offer of allOffers">
       <a class="offers-content-list-li" routerLink="{{ offer.id }}">
         <div class="offers-content-list-li-img-container">
@@ -155,17 +160,21 @@
           </p>
           <h4 class="offers-content-list-li-titles-town">{{ offer.town }}</h4>
           <div class="offers-content-list-li-titles-stay">
-            <span class="material-symbols-outlined"> calendar_month </span>
-            <span>{{ offer.lengthOfStay }} dni</span>
+            <span class="material-symbols-outlined title-icons"> calendar_month </span>
+            <span>{{ offer.deadline }}</span>
           </div>
           <div class="offers-content-list-li-titles-stay">
-            <span class="material-symbols-outlined"> business_center </span>
+            <span class="material-symbols-outlined title-icons"> business_center </span>
             <span>{{ offer.typeOfJourney }}</span>
+          </div>
+          <div class="offers-content-list-li-titles-stay">
+            <span class="material-symbols-outlined title-icons"> schedule </span>
+            <span>{{ offer.lengthOfStay }} dni</span>
           </div>
         </div>
         <div class="offers-content-list-li-score-container">
           <div class="offers-content-list-li-score-container-rating">
-            <span class="material-symbols-outlined icon-thumb"> thumb_up </span>
+            <span class="material-symbols-outlined icon-thumb hide"> thumb_up </span>
             <p class="offers-content-list-li-score-container-p">
               {{ offer.score }}
             </p>

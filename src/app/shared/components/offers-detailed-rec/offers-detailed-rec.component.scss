@@ -1,0 +1,193 @@
+.offers-detailed-rec {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+  &-link {
+    transition: 0.5s all;
+    &:hover {
+      .Włochy,
+      .Meksyk,
+      .Algieria,
+      .Indie,
+      .Japonia,
+      .Tajlandia,
+      .Hiszpania,
+      .Szwajcaria {
+        background-size: 220%;
+        .offers-detailed-rec-link-title {
+          opacity: 0;
+        }
+      }
+    }
+    &-title {
+      transition: 0.5s all;
+      color: #fff;
+      font-size: 48px;
+      position: absolute;
+      bottom: 2%;
+      left: 5%;
+      transform: translate(2%, -5%);
+    }
+  }
+}
+
+.anim {
+}
+
+.rel {
+  position: relative;
+}
+
+.Włochy {
+  background-image: url(../../../../assets/img/hero/hot-deals/wenecja1.jpg);
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  transition: 0.5s all;
+}
+
+.Meksyk {
+  background-image: url(../../../../assets/img/hero/hot-deals/meksyk1.jpg);
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  transition: 0.5s all;
+}
+
+.Algieria {
+  background-image: url(../../../../assets/img/offers/thumb/Algier-town.jpg);
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  transition: 0.5s all;
+}
+
+.Indie {
+  background-image: url(../../../../assets/img/where/indie2.jpg);
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  transition: 0.5s all;
+}
+
+.Japonia {
+  background-image: url(../../../../assets/img/offers/thumb/tokio-town.jpg);
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  transition: 0.5s all;
+}
+
+.Tajlandia {
+  background-image: url(../../../../assets/img/offers/thumb/bangkok-town.jpg);
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  transition: 0.5s all;
+}
+
+.Hiszpania {
+  background-image: url(../../../../assets/img/offers/thumb/madryt-town.jpg);
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  transition: 0.5s all;
+}
+
+.Szwajcaria {
+  background-image: url(../../../../assets/img/offers/thumb/bern-town.jpg);
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  transition: 0.5s all;
+}
+
+@media (max-width: 640px) {
+  .offers-detailed-rec {
+    grid-template-columns: 50% 50%;
+  }
+  .Włochy,
+  .Meksyk,
+  .Algieria,
+  .Indie,
+  .Japonia,
+  .Tajlandia,
+  .Hiszpania,
+  .Szwajcaria {
+    height: 300px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 800px) {
+  .offers-detailed-rec {
+    grid-template-columns: 50% 50%;
+  }
+  .Włochy,
+  .Meksyk,
+  .Algieria,
+  .Indie,
+  .Japonia,
+  .Tajlandia,
+  .Hiszpania,
+  .Szwajcaria {
+    height: 450px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+  .offers-detailed-rec {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+  .Włochy,
+  .Meksyk,
+  .Algieria,
+  .Indie,
+  .Japonia,
+  .Tajlandia,
+  .Hiszpania,
+  .Szwajcaria {
+    background-size: 160%;
+    height: 500px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1630px) {
+  .offers-detailed-rec {
+    grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+  }
+  .Włochy,
+  .Meksyk,
+  .Algieria,
+  .Indie,
+  .Japonia,
+  .Tajlandia,
+  .Hiszpania,
+  .Szwajcaria {
+    background-size: 250%;
+    height: 500px;
+  }
+}
+
+@media (min-width: 1921px) {
+  .Włochy,
+  .Meksyk,
+  .Algieria,
+  .Indie,
+  .Japonia,
+  .Tajlandia,
+  .Hiszpania,
+  .Szwajcaria {
+    height: 600px;
+  }
+  .offers-detailed-rec-link-title {
+    font-size: 60px;
+  }
+}

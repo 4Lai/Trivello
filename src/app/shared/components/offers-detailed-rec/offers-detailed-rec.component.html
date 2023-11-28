@@ -1,0 +1,13 @@
+<app-offer-detail-title [title]="'Proponowane oferty'"></app-offer-detail-title>
+
+<section class="offers-detailed-rec">
+  <a
+    class="offers-detailed-rec-link rel"
+    *ngFor="let offer of offers"
+    href="/oferty/{{ offer.id }}"
+  >
+    <div class="{{ offer.country }}">
+      <span class="offers-detailed-rec-link-title">{{ offer.country }}</span>
+    </div>
+  </a>
+</section>

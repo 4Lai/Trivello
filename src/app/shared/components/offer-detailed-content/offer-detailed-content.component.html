@@ -1,0 +1,52 @@
+<app-offer-detail-title
+  [title]="foundElement.country"
+  [subtitle]="foundElement.town"
+></app-offer-detail-title>
+
+<section class="offer-detailed-content">
+  <div class="offer-detailed-content-container">
+    <div class="offer-detailed-content-container-sib">
+      <img
+        class="offer-detailed-content-container-sib-img"
+        src="{{ foundElement.img }}"
+        alt=""
+      />
+      <div>
+        <app-offer-detail-score class="to-right"
+          [score]="foundElement.score"
+        ></app-offer-detail-score>
+        <p class="offer-detailed-content-container-sib-desc">
+          {{ foundElement.desc }}
+        </p>
+        <div class="flex">
+          <div class="offer-detailed-content-container-sib-icons">
+            <div>
+              <span class="material-symbols-outlined icon2"> schedule </span>
+              <p class="icon-text">{{ foundElement.lengthOfStay }} dni</p>
+            </div>
+            <div>
+              <span class="material-symbols-outlined icon2">
+                calendar_month
+              </span>
+              <p class="icon-text">{{ foundElement.deadline }}</p>
+            </div>
+          </div>
+          <p class="offer-detailed-content-container-sib-icons-price">
+            <span class="material-symbols-outlined icon2"> sell </span>
+            {{ foundElement.price }}
+            <span class="offer-detailed-content-container-sib-icons-price-sub">
+              zł/os
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-offer-detail-title [title]="'Miejsca zwiedzania'"></app-offer-detail-title>
+<app-offer-detailed-obj [fElement]="foundElement.places"></app-offer-detailed-obj>
+
+<app-offer-detail-title [title]="'Plan pobytu'"></app-offer-detail-title>
+<app-offer-detailed-stay-plan [plan]="foundElement.planOfStay"></app-offer-detailed-stay-plan>

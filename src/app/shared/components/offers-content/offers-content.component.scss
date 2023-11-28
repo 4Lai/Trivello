@@ -116,7 +116,7 @@
     &-li {
       text-decoration: none;
       display: grid;
-      grid-template-columns: 33.33% 39.33% 27.33%;
+      grid-template-columns: 33.33% 38.33% 28.33%;
       height: 300px;
       border-radius: 20px;
       border: 1px solid coral;
@@ -125,6 +125,7 @@
         position: relative;
         &-img {
           width: 100%;
+          height: 100%;
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
@@ -176,13 +177,18 @@
         }
       }
       &-price {
-        font-size: 22px;
+        font-size: 26px;
         &-s {
-          font-size: 36px;
+          font-size: 40px;
         }
       }
     }
   }
+}
+
+.no-offers-message {
+  font-size: 32px;
+  font-weight: 300;
 }
 
 .icon-thumb {
@@ -224,7 +230,6 @@ hr {
   display: flex;
   justify-content: center;
   &-submit {
-    // padding: 10px 20px;
     width: 120px;
     height: 40px;
     border: none;
@@ -240,6 +245,203 @@ hr {
       background-color: #000;
       color: #fff;
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  // form
+  .offers-content {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
+    grid-template-columns: auto;
+  }
+  .offers-content-form-container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .offers-content-form-container-form {
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+  }
+  .button-container-submit {
+    margin-bottom: 30px;
+  }
+  // list
+  .offers-content-list-li-img-container-img {
+    height: 100%;
+  }
+  .offers-content-list-li {
+    height: 200px;
+  }
+  .offers-content-list-li-titles {
+    padding: 10px;
+  }
+  .offers-content-list-li-titles-country {
+    font-size: 20px;
+  }
+  .offers-content-list-li-titles-town {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .offers-content-list-li-titles-stay {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .offers-content-list-li-score-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+  }
+  .offers-content-list-li-score-container-rating {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: inherit;
+  }
+  .hide {
+    display: none;
+  }
+  .offers-content-list-li-price {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+  }
+  .offers-content-list-li-price-s {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1400px) {
+  // form
+  .offers-content {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .offers-content-form-container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .offers-content-form-container-form {
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+  }
+  .button-container-submit {
+    margin-bottom: 30px;
+  }
+  // list
+  .offers-content-list-li-img-container-img {
+    width: 100%;
+    height: auto;
+  }
+  .offers-content-list {
+    width: 70%;
+    grid-template-columns: auto;
+  }
+}
+
+@media (min-width: 1921px) {
+  // list
+  .offers-content-list-li-img-container-img {
+    width: 100%;
+    height: auto;
+  }
+  .offers-content-list-li {
+    height: 400px;
+  }
+  .offers-content-list-li-titles-country {
+    font-size: 44px;
+  }
+  .offers-content-list-li-titles-town {
+    font-size: 56px;
+  }
+  .offers-content-list-li-titles-stay {
+    font-size: 38px;
+  }
+  .offers-content-list-li-score-container-rating {
+    padding: 20px 45px;
+    display: flex;
+    justify-content: center;
+  }
+  .offers-content-list-li-price {
+    font-size: 42px;
+  }
+  .offers-content-list-li-price-s {
+    font-size: 56px;
+  }
+  .title-icons {
+    font-size: 36px;
+  }
+  .no-offers-message {
+    font-size: 48px;
+  }
+  .icon-thumb {
+    font-size: 44px;
+  }
+  .offers-content-list-li-score-container-p {
+    padding: 5px 12.5px;
+    font-size: 44px;
+  }
+  .offers-content-list-p {
+    font-size: 40px;
+  }
+  .offers-content-form-container-title {
+    font-size: 52px;
+  }
+  .form-title {
+    font-size: 36px;
+  }
+  label {
+    font-size: 32px;
+  }
+  .radio-btn {
+    transform: scale(1.5);
+  }
+  .offers-content-form-container-form-type-radio {
+    column-gap: 20px;
+  }
+  .offers-content-form-container-form-price-input {
+    padding: 4px 50px 4px 8px;
+    font-size: 34px;
+  }
+  .offers-content-form-container-form-price-input-cur {
+    font-size: 34px;
+  }
+  .offers-content-form-container-form-stay-input {
+    padding: 4px 170px 4px 8px;
+    font-size: 34px;
+  }
+  .offers-content-form-container-form-stay-input-days {
+    font-size: 34px;
+  }
+  .offers-content-form-container-form-countries-select {
+    font-size: 34px;
+  }
+  .offers-content-form-container-form-countries-select-option {
+    font-size: 20px;
+  }
+  .offers-content-form-container-form-deadline-select {
+    font-size: 34px;
+  }
+  .offers-content-form-container-form-deadline-select-option {
+    font-size: 20px;
+  }
+  .button-container {
+  }
+  .button-container-submit {
+    margin-top: 20px;
+    width: 200px;
+    height: 60px;
+    font-size: 34px;
   }
 }
 

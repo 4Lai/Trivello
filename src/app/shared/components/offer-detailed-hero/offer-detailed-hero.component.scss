@@ -1,0 +1,36 @@
+.offer-detailed-hero {
+  width: 100%;
+  &-background {
+    background-image: url(../../../../assets/img/offers/girl-with-map.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+    &-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 72px;
+      color: #fff;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .offer-detailed-hero-background-title {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1921px) {
+  .offer-detailed-hero-background {
+    height: 600px;
+  }
+
+  .offer-detailed-hero-background-title {
+    font-size: 108px;
+  }
+}

@@ -1,0 +1,8 @@
+<section class="offer-detail-title">
+  <h1 class="offer-detail-title-h" *ngIf="title && subtitle; else sub">
+    {{ title }} / {{ subtitle }}
+  </h1>
+  <ng-template #sub>
+    <h1 class="offer-detail-title-h">{{ title }}</h1>
+  </ng-template>
+</section>

@@ -8,4 +8,7 @@ export interface OffersAll {
   img: string;
   score: number;
   id: number;
+  desc: string;
+  places: { place: string }[];
+  planOfStay: string;
 }
