@@ -19,7 +19,6 @@ export class NewsletterComponent {
 
   onSubmit() {
     // this.httpClient.post<NewsletterForm>('url', this.formNews.value.email)
-    // console.log(this.formNews.value.email);
     this.formNews.reset();
   }
 }

@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { OffersAll } from '../../interfaces/offers-all';
 
 @Component({
   selector: 'app-offer-detailed-obj',
@@ -7,5 +6,5 @@ import { OffersAll } from '../../interfaces/offers-all';
   styleUrls: ['./offer-detailed-obj.component.scss'],
 })
 export class OfferDetailedObjComponent {
-  @Input() fElement:any;
+  @Input() fElement:any
 }

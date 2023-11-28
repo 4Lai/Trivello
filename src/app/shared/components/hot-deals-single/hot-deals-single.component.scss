@@ -36,12 +36,6 @@
     overflow: hidden;
     &:hover {
       transition: 0.5s all;
-      // .hot-deals-single-element-price {
-      //   opacity: 1;
-      // }
-      // .hot-deals-single-element-title {
-      //   opacity: 1;
-      // }
       .hot-deals-single-element-description {
         opacity: 0.8;
       }
@@ -50,8 +44,6 @@
       width: 100%;
     }
     &-title {
-      // transition: 0.5s all;
-      // opacity: 0;
       font-size: 72px;
       color: #fff;
       position: absolute;
@@ -64,7 +56,6 @@
       transition: 0.5s all;
       opacity: 0;
       font-size: 24px;
-      // width: 600px;
       width: 90%;
       color: #fff;
       padding: 16px;
@@ -76,8 +67,6 @@
     }
 
     &-price {
-      // transition: 0.5s all;
-      // opacity: 0;
       position: absolute;
       top: 10%;
       left: 0%;

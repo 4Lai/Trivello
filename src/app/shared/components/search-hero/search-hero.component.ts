@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { SearchHeroService } from '../../services/search-hero.service';
 import { SearchHero } from '../../interfaces/search-hero';
 import { FormControl, FormGroup } from '@angular/forms';
-import { OffersAllService } from '../../services/offers-all.service';
-import { OffersDeadline } from '../../interfaces/offers-deadline';
-import { OffersCountries } from '../../interfaces/offers-countries';
 import { Router } from '@angular/router';
 
 @Component({
